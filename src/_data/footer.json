@@ -3,12 +3,12 @@
     "tagline": "Empowering your business with innovative solutions.",
     "quickLinks": [
       { "text": "Home", "url": "/" },
-      { "text": "Services", "url": "/service" },
+      { "text": "Services", "url": "/services" },
       { "text": "Area Served", "url": "/area-served" },
       { "text": "About Us", "url": "/about" },
       { "text": "Blog", "url": "/blog" },
       { "text": "Contact", "url": "/contact" },
-      { "text": "Sitemap", "url": "#" }
+      { "text": "Sitemap", "url": "/sitemap" }
     ],
     "contact": {
       "address": "123 Main Street, Suite 500",

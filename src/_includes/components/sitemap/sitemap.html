@@ -1,0 +1,103 @@
+<div class="container mx-auto p-8 pt-32">
+    <h2 class="text-3xl font-semibold mb-6 text-Brandcolor">Sitemap</h2>
+    <ul class="list-none space-y-6">
+        <li>
+            <a href="/" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-home text-Brandcolor"></i> Home
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-info-circle text-Brandcolor"></i> About
+            </a>
+        </li>
+        <li>
+            <a href="/testimonials" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-users text-Brandcolor"></i> Testimonials
+            </a>
+        </li>
+        <li>
+            <a href="/blog" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-blog text-Brandcolor mb-4"></i> Blog
+            </a>
+            <ul class="list-none ml-12 space-y-4">
+                {% for blog in collections.blogs %}
+                    <li>
+                        <a href="{{ blog.url }}" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                            <i class="fas fa-pencil-alt text-Brandcolor"></i> {{ blog.data.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>
+            <a href="/services" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-cogs text-Brandcolor mb-4"></i> Services
+            </a>
+            <ul class="list-none ml-12 space-y-4">
+                <li>
+                    <a href="/services/kitchen" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-utensils text-Brandcolor"></i> Kitchen
+                    </a>
+                </li>
+                <li>
+                    <a href="/services/bath" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-bath text-Brandcolor"></i> Bath
+                    </a>
+                </li>
+                <li>
+                    <a href="/services/additions" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-plus-square text-Brandcolor"></i> Additions
+                    </a>
+                </li>
+                <li>
+                    <a href="/services/indoorliving" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-home text-Brandcolor"></i> Indoor Living
+                    </a>
+                </li>
+                <li>
+                    <a href="/services/outdoorliving" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-tree text-Brandcolor"></i> Outdoor Living
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/area-served" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-map-marker-alt text-Brandcolor mb-4"></i> Areas Served
+            </a>
+            <ul class="list-none ml-12 space-y-4">
+                <li>
+                    <a href="/area-served/dublin" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-location-arrow text-Brandcolor"></i> Dublin
+                    </a>
+                </li>
+                <li>
+                    <a href="/area-served/downtown" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-location-arrow text-Brandcolor"></i> Downtown
+                    </a>
+                </li>
+                <li>
+                    <a href="/area-served/clintonville" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                        <i class="fas fa-location-arrow text-Brandcolor"></i> Clintonville
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/contact" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-envelope text-Brandcolor"></i> Contact
+            </a>
+        </li>
+        <li>
+            <a href="/privacy-policy" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-shield-alt text-Brandcolor"></i> Privacy Policy
+            </a>
+        </li>
+        <li>
+            <a href="/terms-and-conditions" class="text-Brandcolor hover:text-BrandcolorHover hover:underline">
+                <i class="fas fa-file-contract text-Brandcolor"></i> Terms and Conditions
+            </a>
+        </li>
+    </ul>
+</div>

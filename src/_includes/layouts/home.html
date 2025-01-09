@@ -1,16 +1,23 @@
-
 {% extends "layouts/base.html" %}
-<!-- Extends base layout -->
+<!-- Extends the base layout -->
 
 {% block content %}
-<!-- Content block -->
+<!-- Start of content block -->
+
 {% include 'components/hero/hero.html' %}
+<!-- Includes the hero section -->
+
 {% include 'components/home/line.html' %}
+<!-- Includes the line section -->
 
 {% include 'components/home/contentsection.html' %}
-{% include 'components/home/worksection.html' %}
-{% include 'components/home/bannerandblog.html' %}
+<!-- Includes the content section -->
 
+{% include 'components/home/worksection.html' %}
+<!-- Includes the work section -->
+
+{% include 'components/home/bannerandblog.html' %}
+<!-- Includes the banner and blog section -->
 
 {% endblock %}
-<!-- End content block -->
+<!-- End of content block -->
