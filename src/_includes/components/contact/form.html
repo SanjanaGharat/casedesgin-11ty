@@ -112,7 +112,7 @@
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent the default form submission (page reload)
+    e.preventDefault(); // Prevent form from submitting and reloading the page
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
@@ -129,9 +129,11 @@
       });
 
       const result = await response.json();
-      alert(result.message); // Show alert with success message
+      if (result.message) {
+        alert(result.message); // Show success message alert
+      }
 
-      // Optionally, you can clear the form fields here if desired:
+      // Optionally reset the form after submission
       e.target.reset();
     } catch (error) {
       alert('An error occurred while submitting the form. Please try again later.');
