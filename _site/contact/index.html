@@ -242,14 +242,14 @@
 
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData.entries());
 
   // Handle multiple checkboxes (e.g., "projectType")
-  data.projectType = formData.getAll('projectType');
+  data.projectType = formData.getAll('projectType'); // This will now correctly collect the checkbox values as an array
   data.optOut = formData.get('optOut') === 'on';
 
   try {
@@ -266,6 +266,7 @@
     console.error(error);
   }
 });
+
 
 </script>
 <section class="mt-10 px-5">

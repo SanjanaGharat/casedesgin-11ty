@@ -7,6 +7,9 @@ export default async function handler(req, res) {
 
   const formData = req.body;
 
+  // Ensure that projectType is an array
+  const projectTypes = Array.isArray(formData.projectType) ? formData.projectType : [];
+
   // Configure Nodemailer transporter
   const transporter = nodemailer.createTransport({
     service: 'gmail', // Replace with your email provider
@@ -29,7 +32,7 @@ export default async function handler(req, res) {
         ${formData.addressLine1}
         ${formData.addressLine2 || ''}
         ${formData.city}, ${formData.state}, ${formData.zip}
-      Project Types: ${formData.projectType ? formData.projectType.join(', ') : 'None Selected'}
+      Project Types: ${projectTypes.length > 0 ? projectTypes.join(', ') : 'None Selected'}
       Renovation Goals: ${formData.goals}
       Preferred Date: ${formData.date}
       Preferred Time: ${formData.time}
