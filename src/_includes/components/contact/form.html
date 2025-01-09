@@ -111,30 +111,31 @@
 
 
 <script>
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent the default form submission (page reload)
 
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
 
-  // Handle multiple checkboxes (e.g., "projectType")
-  data.projectType = formData.getAll('projectType'); // This will now correctly collect the checkbox values as an array
-  data.optOut = formData.get('optOut') === 'on';
+    // Handle multiple checkboxes (e.g., "projectType")
+    data.projectType = formData.getAll('projectType');
+    data.optOut = formData.get('optOut') === 'on';
 
-  try {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
 
-    const result = await response.json();
-    alert(result.message);
-  } catch (error) {
-    alert('An error occurred while submitting the form. Please try again later.');
-    console.error(error);
-  }
-});
+      const result = await response.json();
+      alert(result.message); // Show alert with success message
 
-
+      // Optionally, you can clear the form fields here if desired:
+      e.target.reset();
+    } catch (error) {
+      alert('An error occurred while submitting the form. Please try again later.');
+      console.error(error);
+    }
+  });
 </script>
