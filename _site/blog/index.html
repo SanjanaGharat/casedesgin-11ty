@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CaseDesgin</title>
+<link href="/resources/css/global.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="/resources/css/tailwind.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="/resources/css/home.css" rel="stylesheet">
+<link href="/resources/css/contact.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header class="headerl1">
+    <div class="headerl2">
+      <a href="/index">
+        <img src="https://www.casedesign.com/wp-content/themes/case-redesign/images/case-logo.svg" 
+             alt="Case Logo" 
+             class="h-10">
+      </a>
+      <div class="lg:hidden">
+        <button id="menu-icon" class="large_menu_icon">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+      <nav class="hidden lg:flex items-center space-x-6">
+        <a href="/index" class="headeritems">Home</a>
+        <div class="relative dropdown">
+          <a href="/about" class="headeritems">About</a>
+          <div class="dropdown-content">
+            
+              <a href="/testimonials">Testimonials</a>
+            
+              <a href="/blog">Blog</a>
+            
+          </div>
+        </div>
+        <div class="relative dropdown">
+          <a href="/services" class="headeritems">Services</a>
+          <div class="dropdown-content">
+            
+              <a href="/services/kitchen">Kitchen</a>
+            
+              <a href="/services/bath">Bath</a>
+            
+              <a href="/services/additions">Additions</a>
+            
+              <a href="/services/indoorliving">Indoor Living</a>
+            
+              <a href="/services/outdoorliving">Outdoor Living</a>
+            
+          </div>
+        </div>
+        <a href="/area-served" class="headeritems">Area Served</a>
+        <a href="/contact" class="headeritems">Contact</a>
+      </nav>
+    </div>
+  
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden lg:hidden">
+    <div class="px-4 py-4 space-y-4">
+      <!-- Home Link -->
+      <a href="/index" class="text-lg font-medium text-gray-700 hover:text-Brandcolor">Home</a>
+      
+      <!-- About Dropdown -->
+      <div>
+        <div class="flex justify-between items-center">
+          <a href="/about" class="text-lg font-medium text-gray-700 hover:text-Brandcolor">About</a>
+          <button onclick="toggleDropdown('mobile-about-dropdown')" class="text-gray-500 focus:outline-none">
+            <i class="bx bx-chevron-down"></i>
+          </button>
+        </div>
+        <div id="mobile-about-dropdown" class="hidden space-y-2 mt-2 ml-4">
+          
+            <a href="/testimonials" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Testimonials</a>
+          
+            <a href="/blog" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Blog</a>
+          
+        </div>
+      </div>
+      
+      <!-- Services Dropdown -->
+      <div>
+        <div class="flex justify-between items-center">
+          <a href="/services" class="text-lg font-medium text-gray-700 hover:text-Brandcolor">Services</a>
+          <button onclick="toggleDropdown('mobile-services-dropdown')" class="text-gray-500 focus:outline-none">
+            <i class="bx bx-chevron-down"></i>
+          </button>
+        </div>
+        <div id="mobile-services-dropdown" class="hidden space-y-2 mt-2 ml-4">
+          
+            <a href="/services/kitchen" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Kitchen</a>
+          
+            <a href="/services/bath" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Bath</a>
+          
+            <a href="/services/additions" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Additions</a>
+          
+            <a href="/services/indoorliving" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Indoor Living</a>
+          
+            <a href="/services/outdoorliving" class="block px-4 py-2 text-gray-700 hover:text-Brandcolor">Outdoor Living</a>
+          
+        </div>
+      </div>
+      
+      <!-- Area Served and Contact Links (on separate lines) -->
+      <a href="/area-served" class="block text-lg font-medium text-gray-700 hover:text-Brandcolor">Area Served</a>
+      <a href="/contact" class="block text-lg font-medium text-gray-700 hover:text-Brandcolor">Contact</a>
+    </div>
+  </div>
+  
+  
+  </header>
+  
+
+    <main>
+        
+<!-- About Section -->
+<div class="flex flex-col md:flex-row justify-between items-center text-center px-8 md:px-20 lg:px-32 gap-2 md:gap-4 lg:gap-6 pt-48 pb-12">
+    <div>
+        <h1 class="hero-title bg-opacity-100 isolate z-1 text-Brandcolor lg:ml-12 whitespace-nowrap">
+            <span>Our Blogs</span>
+        </h1>
+    </div>
+    <div class="lg:mr-2">
+        <p class="hero-description text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vitae mi eu accumsan. Morbi ac luctus nulla. Mauris pharetra mollis eros, et venenatis diam tincidunt vitae. Sed laoreet lectus ac diam dapibus suscipit. Nam est risus, semper eu cursus sed, tempus eu leo. Integer bibendum lectus in orci luctus aliquam.</p>
+    </div>
+</div>
+
+
+<section class="py-24 bg-opacity-100 isolate bg-white">
+    <div class="container mx-auto px-4">
+  
+      <!-- Search Input -->
+      <div class="mb-32 text-center">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search blogs by title..."
+          class="w-full max-w-sm px-4 py-2 border rounded-lg text-Brandcolor focus:outline-none focus:ring-2 focus:ring-BrandcolorHover"
+        />
+      </div>
+  
+      <!-- Blog Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-container">
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/waldo/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=" alt="Insights Into Ipsum Texts" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Insights Into Ipsum Texts
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non volutpat justo, at tincidunt ligula. Phasellus euismod sapien nec lacus.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/quux/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/1303496340/photo/content-marketing-concept-with-person-using-laptop.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=jSzAUMTAZwRCUF_QGrXH5HjsIXJnUXREzNWRjhI2aTA=" alt="Ipsum Lorem Adventures" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Ipsum Lorem Adventures
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non volutpat justo, at tincidunt ligula. Phasellus euismod sapien nec lacus.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/garply/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/1144547939/photo/website-technical-content-writer-social-blogging.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=Ftei6dRF6S2JkB7qFT4Fmdq-B7vDqbJkeOcfGMgfO8E=" alt="Exploring Ipsum Variants" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Exploring Ipsum Variants
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non volutpat justo, at tincidunt ligula. Phasellus euismod sapien nec lacus.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/foo/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/1277014518/photo/young-woman-working-with-a-laptop-female-freelancer-connecting-to-internet-via-computer.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=2Mnef3YojZx-VWGUmkEIQYuAq_3IbNHf0kAub8oTmfQ=" alt="Lorem Ipsum Variations" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Lorem Ipsum Variations
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non volutpat justo, at tincidunt ligula. Phasellus euismod sapien nec lacus.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/example/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/639530610/photo/massive-iceberg-floating-in-antarctica.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=dFiasKJyIkpCxWcItWRpg-WWkpUh1CgXLlmQhXz2uQo=" alt="Exploring the Depths of the Ocean" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Exploring the Depths of the Ocean
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Dive into the mysterious and uncharted depths of the ocean, where secrets and wonders await discovery.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/baz/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/530995185/photo/creative-professional-at-work.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=bhWm56l94y4P9IliOcniiRlvT-WdxAp0UrcSMZf9y9s=" alt="Lorem Ipsum" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Lorem Ipsum
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia metus nec dui hendrerit, non aliquam arcu malesuada.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="relative group overflow-hidden w-full h-96 blog-card">
+          <a href="/blog/bar/" class="block">
+            <div class="relative w-full h-full">
+              <img src="https://media.istockphoto.com/id/1312418309/photo/visual-contents-concept-social-networking-service-streaming-video-communication-network-3d.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=2wop2q3V2_nHCc4X7ISInzRA3Bp52UHAX0tTgKNWeBQ=" alt="Lorem Ipsum Blog Post" class="w-full h-72 object-cover">
+              <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-4">
+                <h3 class="text-lg font-semibold text-Brandcolor hover:underline">
+                  Lorem Ipsum Blog Post
+                </h3>
+                <p class="text-sm text-Brandcolor truncate">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia metus nec dui hendrerit, non aliquam arcu malesuada.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+  
+      <!-- Pagination Controls -->
+      <div class="flex justify-center mt-8" id="pagination-controls">
+        <button
+          id="prev-btn"
+          class="px-2 text-white rounded-lg hover:bg-red-700 bg-red-900 mr-4"
+          onclick="changePage('prev')"
+          style="display: none"
+        >
+          &lt;
+        </button>
+        <span
+          id="page-number"
+          class="text-lg font-semibold text-Brandcolor"
+        >
+          Page 1
+        </span>
+        <button
+          id="next-btn"
+          class="px-2  text-white rounded-lg hover:bg-red-700 bg-red-900 ml-4"
+          onclick="changePage('next')"
+          style="display: none"
+        >
+          &gt;
+        </button>
+      </div>
+  
+      
+    </div>
+  </section>
+  
+  <script>
+  // Blog Pagination and Search
+  const blogs = Array.from(document.querySelectorAll('.blog-card'));
+  const blogsPerPage = 6; // Number of blogs per page
+  let currentPage = 1;
+  let allBlogs = blogs; // Preserve the original dataset
+  let filteredBlogs = allBlogs; // Initially, all blogs are included
+  
+  // Calculate total pages
+  const totalPages = () => Math.ceil(filteredBlogs.length / blogsPerPage);
+  
+  // Function to display blogs for the current page
+  function displayBlogs(page) {
+    const startIndex = (page - 1) * blogsPerPage;
+    const endIndex = startIndex + blogsPerPage;
+  
+    // Reset visibility of all blogs
+    blogs.forEach((blog) => {
+      blog.style.display = 'none';
+    });
+  
+    // Show only blogs for the current page
+    filteredBlogs.slice(startIndex, endIndex).forEach((blog) => {
+      blog.style.display = 'block';
+    });
+  
+    document.getElementById('page-number').textContent = `Page ${page}`;
+    document.getElementById('prev-btn').style.display =
+      page === 1 ? 'none' : 'inline-block';
+    document.getElementById('next-btn').style.display =
+      page === totalPages() ? 'none' : 'inline-block';
+  }
+  
+  // Handle page change
+  function changePage(direction) {
+    if (direction === 'next' && currentPage < totalPages()) {
+      currentPage++;
+    } else if (direction === 'prev' && currentPage > 1) {
+      currentPage--;
+    }
+    displayBlogs(currentPage);
+  }
+  
+  // Initialize pagination
+  displayBlogs(currentPage);
+  
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  
+  function filterBlogs() {
+    const query = searchInput.value.toLowerCase();
+    filteredBlogs = allBlogs.filter((blog) =>
+      blog.querySelector('h3').textContent.toLowerCase().includes(query)
+    );
+  
+    currentPage = 1; // Reset to the first page
+    displayBlogs(currentPage);
+  }
+  
+  // Event listener for search input
+  searchInput.addEventListener('input', filterBlogs);
+  
+  // Load More Functionality
+  function loadMoreBlogs() {
+    blogsPerPage += 3; 
+    displayBlogs(currentPage);
+  }
+  </script>
+  
+
+    </main>
+
+    <!-- Footer Section starts -->
+<div class="flex flex-col bg-opacity-100 isolate">
+    <footer class="bg-Footercolor text-center py-10">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- Brand Section with Logo -->
+          <div class="text-center sm:text-left">
+            <img src="https://www.casedesign.com/wp-content/themes/case-redesign/images/case-logo.svg" alt="Company Logo" class="w-32 mx-auto sm:mx-0">
+            <p class="mt-2 text-sm text-black">Empowering your business with innovative solutions.</p>
+          </div>
+  
+          <!-- Quick Links Section -->
+          <div class="text-center sm:text-left">
+            <h4 class="text-lg font-semibold text-Brandcolor">Quick Links</h4>
+            <ul class="mt-2 space-y-2">
+              
+                <li><a href="/" class="footer-text">Home</a></li>
+              
+                <li><a href="/service" class="footer-text">Services</a></li>
+              
+                <li><a href="/area-served" class="footer-text">Area Served</a></li>
+              
+                <li><a href="/about" class="footer-text">About Us</a></li>
+              
+                <li><a href="/blog" class="footer-text">Blog</a></li>
+              
+                <li><a href="/contact" class="footer-text">Contact</a></li>
+              
+                <li><a href="#" class="footer-text">Sitemap</a></li>
+              
+            </ul>
+          </div>
+  
+          <!-- Contact Us Section -->
+          <div class="text-center sm:text-left">
+            <h4 class="text-lg font-semibold text-Brandcolor">Contact Us</h4>
+            <p class="mt-2 text-sm text-black">123 Main Street, Suite 500</p>
+            <p class="mt-2 text-sm text-black">City, State, ZIP</p>
+            <p class="mt-2 text-sm">
+              Email: <a href="mailto:contact@company.com" class="footer-text">contact@company.com</a>
+            </p>
+            <p class="mt-2 text-sm text-black">Phone: +1 (123) 456-7890</p>
+          </div>
+  
+          <!-- Social Media Section -->
+          <div class="text-center sm:text-left">
+            <h5 class="text-lg font-semibold text-Brandcolor">Follow Us</h5>
+            <div class="mt-4 flex justify-center sm:justify-start space-x-6">
+              <a href="https://facebook.com" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-instagram-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Footer Bottom Section -->
+        <div class="border-t border-gray-700 pt-4">
+          <div class="flex justify-center items-center space-x-2">
+            <p class="text-xs sm:text-sm text-black truncate">© 2024 Your Company. All rights reserved.</p>
+            <a href="/privacy-policy" class="text-xs sm:text-sm footer-text truncate">| Privacy Policy</a>
+            <a href="/terms-and-conditions" class="text-xs sm:text-sm footer-text truncate">| Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Footer Section ends -->
+  
+
+    <script src="/resources/js/script.js"></script>
+</body>
+</html>

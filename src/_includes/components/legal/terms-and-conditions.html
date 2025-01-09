@@ -1,0 +1,8 @@
+<section class="terms-conditions py-16 lg:py-36 px-6 sm:px-16 lg:px-48 bg-opacity-100 isolate z-1">
+    <div class="max-w-screen-xl mx-auto px-4">
+        {% for section in terms_conditions.sections %}
+        <h3 class="text-2xl font-semibold text-Brandcolor mb-4">{{ section.heading }}</h3>
+        <p class="text-lg text-gray-600 mb-6">{{ section.content }}</p>
+        {% endfor %}
+    </div>
+</section>

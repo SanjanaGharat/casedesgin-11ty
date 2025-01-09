@@ -1,0 +1,64 @@
+---
+layout: layouts/base.html
+
+title: Area Served
+
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vitae mi eu accumsan. Morbi ac luctus nulla. Mauris pharetra mollis eros, et venenatis diam tincidunt vitae. Sed laoreet lectus ac diam dapibus suscipit. Nam est risus, semper eu cursus sed, tempus eu leo. Integer bibendum lectus in orci luctus aliquam."
+
+Area_Page_Title: "Our Premium Services in Clintonville, Columbus, Ohio"
+
+ImageURL: "https://images.unsplash.com/photo-1734283117944-c8e6bb4f2d43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2xpbnRvbnZpbGxlJTJDJTIwQ29sdW1idXN8ZW58MHx8MHx8fDA%3D"
+descriptions:
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero tincidunt, interdum nisi id, luctus metus."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Morbi vehicula nisi ac nulla consequat, eget vulputate enim vehicula."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci mollis, facilisis elit id, volutpat purus."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat tincidunt urna, sed lacinia lorem fringilla id."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula, augue nec feugiat sollicitudin, dui lorem consequat urna."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Donec scelerisque magna a neque vulputate, in gravida mi facilisis."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat tincidunt urna, sed lacinia lorem fringilla id."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula, augue nec feugiat sollicitudin, dui lorem consequat urna."
+  - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Donec scelerisque magna a neque vulputate, in gravida mi facilisis."
+
+
+map:
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48868.013024564054!2d-83.05702911853047!3d40.04750335989391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388c6809e1729f%3A0xf0d455a55b7a1cdd!2sClintonville%2C%20Columbus%2C%20OH%2C%20USA!5e0!3m2!1sen!2sin!4v1736423618014!5m2!1sen!2sin"
+
+QuoteTitle: "Get a Free Quote"
+
+QuoteDescription: "Have a project in mind? Let us bring it to life with a free consultation."
+
+QuoteLink :  "/contact"
+
+LocationTitle: "Explore Our Other Locations"
+Location1Link: "/Areapages/Dublin"
+Location1: "Dublin, Ohio"
+Location2Link: "/Areapages/Downtown"
+Location2: "Downtown, Ohio"
+services:
+  - title: "Kitchen Remodeling"
+    imgURL: "https://media.istockphoto.com/id/154030192/photo/modern-beige-kitchen-interior.webp?a=1&b=1&s=612x612&w=0&k=20&c=zUMFEczLgykUmUnLOfyP-S0JBRTAXhwVyudfbJgdhLM="
+    description: "Transform your kitchen into a beautiful and functional space with modern upgrades, including cabinetry, countertops, and lighting."
+    link: "#contact-form"
+
+  - title: "Bathroom Renovations"
+    imgURL: "https://media.istockphoto.com/id/2170317632/photo/luxury-bathroom-interior-with-shower-toilet-and-mirror.webp?a=1&b=1&s=612x612&w=0&k=20&c=Xv4e3JTRwqRwM_3qWM6uAUHzFeAeOJHzCoIeLrM5njw="
+    description: "Create a spa-like atmosphere in your bathroom with luxurious fixtures, modern tiles, and efficient layouts for a fresh and relaxing feel."
+    link: "#contact-form"
+
+  - title: "Home Additions"
+    imgURL: "https://media.istockphoto.com/id/1292475721/photo/house-construction-framing-gradating-into-finished-kitchen-build.jpg?s=612x612&w=0&k=20&c=Bej7Uvae4UaukW4kNYlAV9CkjP7-JTYfTNuCpB49x88="
+    description: "Expand your living space with custom home additions. Whether it's a new bedroom, a sunroom, or a second floor, we build with quality and care."
+    link: "/about"
+
+    
+---
+
+
+{% include 'components/hero/hero-alt.html' %}
+
+{% include "components/areaserved/areapage.html" %}
+{% include "components/areaserved/description.html" %}
+{% include "components/reusable/map.html" %}
+{% include "components/areaserved/servicecard.html" %}
+{% include "components/areaserved/requestquote.html" %}
+{% include "components/areaserved/explorelocation.html" %}

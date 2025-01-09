@@ -1,0 +1,27 @@
+{
+  "name": "casedesgin-11ty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/resources/css/global.css -o ./src/resources/css/tailwind.css && eleventy",
+    "dev": "concurrently \"npx tailwindcss -i ./src/resources/css/global.css -o ./src/resources/css/tailwind.css --watch\" \"eleventy --serve --port 8080 --input ./src --output ./_site && echo 'Your site is running at http://localhost:8080'\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "concurrently": "^9.1.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.7",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.3.1",
+    "nodemailer": "^6.9.16",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}

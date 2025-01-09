@@ -1,0 +1,56 @@
+/* blog.css */
+h1 {
+    padding-top: 10px !important;
+    font-size: 2rem !important;
+    padding-bottom: 10px !important;
+}
+
+h2 {
+    padding-top: 10px !important;
+    font-size: 2rem !important;
+    margin-top: 1.5rem !important;
+    padding-bottom: 10px !important;
+}
+
+h3 {
+    padding-top: 10px !important;
+    font-size: 1.75rem !important;
+    padding-bottom: 10px !important;
+}
+.center-image {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+
+/* Table Styling */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1.5rem;
+}
+
+table, th, td {
+border: 1px solid #ddd;
+}
+
+th, td {
+padding: 12px;
+text-align: left;
+}
+
+th {
+background-color: #f4f4f4;
+font-weight: bold;
+}
+
+tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+.text{
+    color: black;
+}

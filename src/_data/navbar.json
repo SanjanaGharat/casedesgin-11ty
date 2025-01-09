@@ -1,0 +1,23 @@
+{
+    "home": "/index",
+    "about": {
+      "url": "/about",
+      "subLinks": [
+        { "name": "Testimonials", "url": "/testimonials" },
+        { "name": "Blog", "url": "/blog" }
+      ]
+    },
+    "services": {
+      "url": "/services",
+      "subLinks": [
+        { "name": "Kitchen", "url": "/services/kitchen" },
+        { "name": "Bath", "url": "/services/bath" },
+        { "name": "Additions", "url": "/services/additions" },
+        { "name": "Indoor Living", "url": "/services/indoorliving" },
+        { "name": "Outdoor Living", "url": "/services/outdoorliving" }
+      ]
+    },
+    "areaServed": "/area-served",
+    "contact": "/contact"
+  }
+  

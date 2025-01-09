@@ -1,0 +1,31 @@
+{
+    "logo": "https://www.casedesign.com/wp-content/themes/case-redesign/images/case-logo.svg",
+    "tagline": "Empowering your business with innovative solutions.",
+    "quickLinks": [
+      { "text": "Home", "url": "/" },
+      { "text": "Services", "url": "/service" },
+      { "text": "Area Served", "url": "/area-served" },
+      { "text": "About Us", "url": "/about" },
+      { "text": "Blog", "url": "/blog" },
+      { "text": "Contact", "url": "/contact" },
+      { "text": "Sitemap", "url": "#" }
+    ],
+    "contact": {
+      "address": "123 Main Street, Suite 500",
+      "cityStateZip": "City, State, ZIP",
+      "email": "contact@company.com",
+      "phone": "+1 (123) 456-7890"
+    },
+    "socialMedia": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "linkedin": "https://linkedin.com",
+      "instagram": "https://instagram.com"
+    },
+    "footerBottom": {
+      "privacyPolicy": "/privacy-policy",
+      "terms": "/terms-and-conditions",
+      "copyrightText": "© 2024 Your Company. All rights reserved."
+    }
+  }
+  

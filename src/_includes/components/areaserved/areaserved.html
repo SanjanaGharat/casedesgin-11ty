@@ -1,0 +1,23 @@
+<!-- Section Container -->
+<section class="flex flex-col items-center justify-center min-h-[50vh] bg-white">
+    <!-- Card Container -->
+    <div class="flex flex-wrap justify-center gap-12 p-4">
+        {% for card in cards %}
+        <!-- Card -->
+        <div class="flex flex-col items-center w-full sm:w-auto group">
+            <a href="{{ card.link }}" class="relative w-full sm:w-[314px] h-[188px] rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:bg-transparent flex items-center justify-center cursor-pointer">
+                    <h2 class="text-white text-lg sm:text-2xl font-semibold group-hover:opacity-0">{{ card.name }}</h2>
+                </div>
+            </a>
+            <a href="{{ card.link }}">
+                <button class="px-4 sm:px-8 py-2 mt-8 bg-Brandcolor hover:bg-BrandcolorHover text-white font-semibold rounded w-full sm:w-[314px] h-[35px]">
+                    {{ card.button_text }}
+                </button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+

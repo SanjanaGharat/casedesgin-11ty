@@ -1,0 +1,65 @@
+<!-- Footer Section starts -->
+<div class="flex flex-col bg-opacity-100 isolate">
+    <footer class="bg-Footercolor text-center py-10">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- Brand Section with Logo -->
+          <div class="text-center sm:text-left">
+            <img src="{{ footer.logo }}" alt="Company Logo" class="w-32 mx-auto sm:mx-0">
+            <p class="mt-2 text-sm text-black">{{ footer.tagline }}</p>
+          </div>
+  
+          <!-- Quick Links Section -->
+          <div class="text-center sm:text-left">
+            <h4 class="text-lg font-semibold text-Brandcolor">Quick Links</h4>
+            <ul class="mt-2 space-y-2">
+              {% for link in footer.quickLinks %}
+                <li><a href="{{ link.url }}" class="footer-text">{{ link.text }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+  
+          <!-- Contact Us Section -->
+          <div class="text-center sm:text-left">
+            <h4 class="text-lg font-semibold text-Brandcolor">Contact Us</h4>
+            <p class="mt-2 text-sm text-black">{{ footer.contact.address }}</p>
+            <p class="mt-2 text-sm text-black">{{ footer.contact.cityStateZip }}</p>
+            <p class="mt-2 text-sm">
+              Email: <a href="mailto:{{ footer.contact.email }}" class="footer-text">{{ footer.contact.email }}</a>
+            </p>
+            <p class="mt-2 text-sm text-black">Phone: {{ footer.contact.phone }}</p>
+          </div>
+  
+          <!-- Social Media Section -->
+          <div class="text-center sm:text-left">
+            <h5 class="text-lg font-semibold text-Brandcolor">Follow Us</h5>
+            <div class="mt-4 flex justify-center sm:justify-start space-x-6">
+              <a href="{{ footer.socialMedia.facebook }}" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a href="{{ footer.socialMedia.twitter }}" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+              <a href="{{ footer.socialMedia.linkedin }}" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="{{ footer.socialMedia.instagram }}" target="_blank" class="footer-text text-2xl">
+                <i class="fab fa-instagram-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Footer Bottom Section -->
+        <div class="border-t border-gray-700 pt-4">
+          <div class="flex justify-center items-center space-x-2">
+            <p class="text-xs sm:text-sm text-black truncate">{{ footer.footerBottom.copyrightText }}</p>
+            <a href="{{ footer.footerBottom.privacyPolicy }}" class="text-xs sm:text-sm footer-text truncate">| Privacy Policy</a>
+            <a href="{{ footer.footerBottom.terms }}" class="text-xs sm:text-sm footer-text truncate">| Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Footer Section ends -->
+  

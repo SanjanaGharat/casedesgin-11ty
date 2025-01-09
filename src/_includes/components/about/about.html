@@ -1,0 +1,34 @@
+<section class="px-8 md:px-16 lg:px-32 py-4">
+    <div class="max-w-4xl mx-auto">
+        {% for section in sections %}
+            <div class="mb-12">
+                <h2 class="text-Brandcolor text-3xl mb-6 text-left">{{ section.title }}</h2>
+                
+                {% for point in section.points %}
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+                        {{ point }}
+                    </p>
+                {% endfor %}
+                
+                {% if section.link %}
+                    <a 
+                        href="{{ section.link }}" 
+                        class="text-Brandcolor hover:text-BrandcolorHover text-lg font-medium hover:underline hover:opacity-80"
+                    >
+                        {{ section.link_text }}
+                    </a>
+                {% endif %}
+                
+                {% if section.image %}
+                    <div class="text-left mt-4">
+                        <img 
+                            src="{{ section.image }}" 
+                            alt="{{ section.title }} Image" 
+                            class="h-16 w-auto"
+                        >
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

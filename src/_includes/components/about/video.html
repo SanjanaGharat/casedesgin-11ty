@@ -1,0 +1,18 @@
+<!-- Video Section -->
+<section class="flex items-center justify-center px-8 md:px-16 lg:px-32 py-12">
+    <div class="w-full max-w-4xl">
+        <div class="relative" style="padding-top: 56.25%; /* 16:9 Aspect Ratio */">
+            <iframe 
+                class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg" 
+                src="{{ video_url }}" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="mt-4 text-center text-gray-600 text-sm">
+            {{ video_description }}
+        </p>
+    </div>
+</section>

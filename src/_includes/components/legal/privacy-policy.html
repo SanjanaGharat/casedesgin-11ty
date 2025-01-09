@@ -1,0 +1,24 @@
+<section class="privacy-policy py-16 px-6 sm:px-16 lg:px-48">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-Brandcolor mb-8">{{ privacy_policy.title }}</h2>
+  
+      {% for section in privacy_policy.sections %}
+      <h3 class="text-2xl font-semibold text-Brandcolor mb-4">{{ section.heading }}</h3>
+      
+      {% if section.content is string %}
+      <p class="text-lg text-gray-600 mb-6">{{ section.content }}</p>
+      {% else %}
+        {% for item in section.content %}
+        {% if item.label %}
+        <p class="text-lg text-gray-600 mb-6">
+          <strong>{{ item.label }}:</strong> {{ item.text }}
+        </p>
+        {% else %}
+        <p class="text-lg text-gray-600 mb-6">{{ item.text }}</p>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  

@@ -1,0 +1,69 @@
+<section class="py-12 px-4">
+    <div class="max-w-screen-xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-Brandcolor mb-8">{{ past_work_heading }}</h2>
+        <p class="text-lg text-gray-600 mb-12">
+          {{ past_work_description }}
+        </p>
+  
+      <!-- Image Grid -->
+      <div id="image-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Images will be added dynamically here -->
+      </div>
+  
+      <!-- Hidden data for JavaScript to access -->
+      <div id="projects-data" style="display: none;">
+        {% for project in projects %}
+          <div class="project-item"
+               data-src="{{ project.src }}"
+               data-alt="{{ project.alt }}"
+               data-description="{{ project.description }}">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  <script type="module">
+    // Function to create image cards
+    function createImageCard(project) {
+      const card = document.createElement("div");
+      card.classList.add("relative");
+  
+      const img = document.createElement("img");
+      img.src = project.src;
+      img.alt = project.alt;
+      img.classList.add("w-full", "h-full", "object-cover");
+  
+      const overlay = document.createElement("div");
+      overlay.classList.add("absolute", "bottom-0", "left-0", "bg-white", "bg-opacity-75", "p-4", "w-full");
+      const overlayText = document.createElement("p");
+      overlayText.classList.add("text-gray-700", "font-medium", "text-base");
+      overlayText.textContent = project.description;
+      overlay.appendChild(overlayText);
+  
+      card.appendChild(img);
+      card.appendChild(overlay);
+  
+      return card;
+    }
+  
+    // Function to load images dynamically into the grid
+    function loadImages() {
+      const grid = document.getElementById("image-grid");
+      const projectElements = document.querySelectorAll("#projects-data .project-item");
+  
+      projectElements.forEach((element) => {
+        const project = {
+          src: element.getAttribute("data-src"),
+          alt: element.getAttribute("data-alt"),
+          description: element.getAttribute("data-description"),
+        };
+        const imageCard = createImageCard(project);
+        grid.appendChild(imageCard);
+      });
+    }
+  
+    // Load images when the script is executed
+    loadImages();
+  </script>
+  

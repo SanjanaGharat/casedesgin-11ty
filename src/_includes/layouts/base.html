@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "layouts/basehead.html" %}
+</head>
+<body>
+    {% include "components/shared/navbar.html" %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "components/shared/footer.html" %}
+
+    <script src="/resources/js/script.js"></script>
+</body>
+</html>

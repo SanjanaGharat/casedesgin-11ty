@@ -1,0 +1,129 @@
+
+
+<div class="bg-opacity-100 isolate bg-white">
+    <!-- text-banner -->
+    <section class="text-banner-wrapper">
+        <!-- Gray Tint Overlay -->
+        <div class="text-banner-overlay"></div>
+    
+        <!-- Content Centered -->
+        <div class="text-banner-content">
+            <!-- Text Content -->
+            <h2 class="text-banner-heading">
+                {{banner_text}}
+            </h2>
+    
+            <!-- Button -->
+            <a href="{{banner_button_url}}" class="text-banner-button">
+                {{banner_button}}
+            </a>
+        </div>
+    </section>
+    
+    
+    <!-- blog -->
+    <section class="blog grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-2 px-8 mt-12">
+        <!-- Left Column: Our Blog Text and One Blog Card -->
+        <div class="blog__left">
+            <div class="blog__text mb-8">
+                <h2 class="text-3xl text-Brandcolor mb-3">{{blog_heading}}</h2>
+                <p class="text-xl leading-relaxed">{{blog_description}}</p>
+            </div>
+            <!-- First Blog Card -->
+            <div class="blog-post mb-8 relative">
+                <a href="#" class="block relative">
+                    <div class="blog-post__bg bg-cover bg-center w-full sm:w-[500px] h-[350px] sm:h-[400px]" style="background-image: url({{blog1_img}});">
+                        <!-- White Bottom Overlay Inside Image -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-white opacity-80 h-[50px] flex items-center justify-center px-4">
+                            <div class="text-Brandcolor text-sm font-semibold">
+                                <h6>{{blog1_title}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    
+        <!-- Right Column: Other Blog Cards -->
+        <div class="blog__right">
+            <div class="blog-post mb-8 relative">
+                <a href="#" class="block relative">
+                    <div class="blog-post__bg bg-cover bg-center w-full sm:w-[500px] h-[350px] sm:h-[400px]" style="background-image: url({{blog2_img}});">
+                        <!-- White Bottom Overlay Inside Image -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-white opacity-80 h-[50px] flex items-center justify-center px-4">
+                            <div class="text-Brandcolor text-sm font-semibold">
+                                <h6>{{blog2_title}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post mb-8 relative">
+                <a href="#" class="block relative">
+                    <div class="blog-post__bg bg-cover bg-center w-full sm:w-[500px] h-[350px] sm:h-[400px]" style="background-image: url({{blog3_img}});">
+                        <!-- White Bottom Overlay Inside Image -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-white opacity-80 h-[50px] flex items-center justify-center px-4">
+                            <div class="text-Brandcolor text-sm font-semibold">
+                                <h6>{{blog3_title}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="flex justify-center items-center w-full bg-opacity-100 isolate">
+        <div class="text-center my-8">
+            <a href="{{ blog_button_url }}" class="inline-block px-8 py-4 bg-Brandcolor text-white text-base transition-transform duration-200 hover:bg-BrandcolorHover hover:scale-105">
+                {{ blog_button_text }}
+            </a>
+        </div>
+    </div>
+    
+    <style>
+        .blog-post__bg {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+        }
+    
+    
+    
+        @media (max-width: 770px) {
+            .blog-post__bg {
+                width: 100%;
+                height: 250px;
+            }
+    
+           
+        }
+    
+        @media (max-width: 1064px) and (min-width: 770px) {
+            .blog {
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 20px; 
+            }
+    
+            .blog-post__bg {
+                width: 100%;
+                height: 350px;
+            }
+        }
+        @media (min-width: 1064px) {
+            .blog {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+    
+            .blog-post__bg {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
+    </div>
+    
+    

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "layouts/basehead.html" %}
+    <link href="/resources/css/blog.css" rel="stylesheet">
+
+</head>
+<body>
+    {% include "components/shared/navbar.html" %}
+<style>
+
+
+
+</style>
+    <main>
+        <section class="py-32 bg-opacity-100 isolate bg-white">
+            <div class="container mx-auto px-6 lg:px-48">
+              <!-- Blog Title Section -->
+              <div class="text-center mb-8">
+                <h1 class="text-4xl font-semibold text-Brandcolor">{{ title }}</h1>
+              </div>
+        
+              <!-- Author, Date, and Icons -->
+              <div class="flex justify-center items-center space-x-4 text-sm text-Brandcolor mb-8">
+                <div class="flex items-center">
+                  <i class="fas fa-user"></i> <span class="ml-2">{{ author }}</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-calendar-alt"></i> <span class="ml-2">{{ date }}</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-tag"></i> <span class="ml-2">{{ category }}</span>
+                </div>
+              </div>
+        
+              <!-- Blog Image -->
+              <div class="mb-8">
+                <img src="{{ image }}" alt="Blog Image" class="w-full h-72 object-cover rounded-lg">
+              </div>
+        
+              <!-- Blog Content -->
+              <div class="prose text-lg text-Brandcolor mx-auto ">
+                {{ content | safe }}
+              </div>
+            </div>
+
+
+                    <!-- Social Sharing Section -->
+                    <div class=" mt-10 px-4 lg:px-12">
+                        <div class="text-center">
+                            <p class="text-Brandcolor mb-4">Share this article:</p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ url }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-facebook-square fa-2x"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url={{ url }}&text={{ title }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                                    <i class="fab fa-twitter-square fa-2x"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ url }}&title={{ title }}" target="_blank" class="text-blue-700 hover:text-blue-900">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                                <a href="mailto:?subject={{ title }}&body=Check out this article: {{ url }}" class="text-gray-700 hover:text-gray-900">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Posts Section -->
+                    <div class="mt-4 px-4 lg:px-16">
+                        <h2 class="text-2xl font-semibold text-Brandcolor mb-6">Related Posts</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {% for post in collections.blogs.slice(0, 3) %}
+                                <div class="rounded-lg shadow-lg overflow-hidden">
+                                    <img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="w-full h-48 object-cover">
+                                    <div class="p-4">
+                                        <h3 class="text-lg font-semibold mb-2 text-Brandcolor">{{ post.data.title }}</h3>
+                                        <p class="text-sm text-gray-600">{{ post.data.description }}</p>
+                                        <a href="{{ post.url }}" class="text-Brandcolor hover:underline font-semibold mt-4 block">Read More</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Previous and Next Buttons -->
+                    <div class="mt-8 flex justify-between px-4 lg:px-12">
+                        {% if previous %}
+                            <a href="{{ previous.url }}" class="text-Brandcolor font-semibold py-2 px-4 border rounded hover:bg-gray-200 transition duration-300">
+                                ← Previous: {{ previous.data.title }}
+                            </a>
+                        {% else %}
+                            <span></span> 
+                        {% endif %}
+                    
+                        {% if next %}
+                            <a href="{{ next.url }}" class="text-Brandcolor font-semibold py-2 px-4 border rounded hover:bg-gray-200 transition duration-300">
+                                Next: {{ next.data.title }} →
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <!-- Back Button -->
+                    <div class="mt-8 mb-12 text-center px-4 lg:px-12">
+                        <a href="/blog" class="text-Brandcolor font-semibold py-2 px-4 border rounded hover:bg-gray-200 transition duration-300">
+                            Back to Blogs
+                        </a>
+                    </div>
+        </section>
+
+
+    </main>
+
+    {% include "components/shared/footer.html" %}
+    <script src="/resources/js/script.js"></script>
+</body>
+</html>
