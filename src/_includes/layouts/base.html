@@ -7,7 +7,7 @@
     {% include "components/shared/navbar.html" %}
 
     <main>
-        {{ content | safe }}
+        {% block content %}{% endblock %}
     </main>
 
     {% include "components/shared/footer.html" %}
